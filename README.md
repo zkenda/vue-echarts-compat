@@ -1,22 +1,28 @@
-<h1 align="center">Vue-ECharts</h1>
+<h1 align="center">Vue-ECharts-compat</h1>
 
-<p align="center">Vue.js component for Apache ECharts™.</p>
+<p align="center">Fork of vue-echarts that supports Apache ECharts™ 6 and Vue 2/3.</p>
 <p align="center"><a href="https://npmjs.com/package/vue-echarts"><img alt="npm version" src="https://img.shields.io/npm/v/vue-echarts"></a> <a href="https://vue-echarts.dev/"><img src="https://img.shields.io/badge/Demo%20%C2%BB-20c3aa" alt="View demo"></a> <a href="./README.zh-Hans.md"><img src="https://img.shields.io/badge/%E4%B8%AD%E6%96%87%E7%89%88%20%C2%BB-000" alt="前往中文版"></a></p>
 <p align="center"><a href="https:///pr.new/ecomfe/vue-echarts"><img alt="Open in Codeflow" src="https://developer.stackblitz.com/img/open_in_codeflow.svg" height="28"></a> <a href="https://codesandbox.io/p/github/ecomfe/vue-echarts"><img alt="Edit in CodeSandbox" src="https://assets.codesandbox.io/github/button-edit-lime.svg" height="28"></a></p>
 
 ---
+> Vue-ECharts 8.0 drops Vue 2 support and moves up to ECharts 6.
+The fork keeps Vue 2 compatibility adopting ECharts 6, letting Vue 2 projects access the newest charting features instead of staying on the legacy release.
 
-> Still using v6? Read v6 docs [here →](https://github.com/ecomfe/vue-echarts/tree/6.x)
 
 ## Installation & Usage
 
 ### npm
 
 ```sh
-npm add echarts vue-echarts
+npm add echarts vue-echarts-compat
 ```
 
-#### Example
+#### Migration from vue-echarts
+
+Library is a drop-in replacement for vue-echarts v7. Remove vue-echarts, install vue-echarts-compat and replace all the imports.
+
+
+#### Usage
 
 <details>
 <summary>Vue 3 <a href="https://stackblitz.com/edit/vue-echarts-vue-3?file=src%2FApp.vue">Demo →</a></summary>
@@ -35,7 +41,7 @@ import {
   TooltipComponent,
   LegendComponent
 } from "echarts/components";
-import VChart, { THEME_KEY } from "vue-echarts";
+import VChart, { THEME_KEY } from "vue-echarts-compat";
 import { ref, provide } from "vue";
 
 use([
@@ -113,7 +119,7 @@ import {
   TooltipComponent,
   LegendComponent
 } from "echarts/components";
-import VChart, { THEME_KEY } from "vue-echarts";
+import VChart, { THEME_KEY } from "vue-echarts-compat";
 
 use([
   CanvasRenderer,
@@ -214,7 +220,7 @@ Drop `<script>` inside your HTML file and access the component via `window.VueEC
 ```html
 <script src="https://cdn.jsdelivr.net/npm/vue@3.4.33"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue-echarts@7.0.3"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-echarts-compat@7.0.4"></script>
 ```
 <!-- vue3Scripts:end -->
 
@@ -234,7 +240,7 @@ app.component('v-chart', VueECharts)
 ```html
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue-echarts@7.0.3"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-echarts-compat@7.0.4"></script>
 ```
 <!-- vue2Scripts:end -->
 

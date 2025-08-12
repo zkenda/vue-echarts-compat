@@ -1,10 +1,8 @@
 {
-  "name": "vue-echarts",
-  "version": "7.0.3",
-  "description": "Vue.js component for Apache ECharts™.",
-  "license": "MIT",
-  "repository": "https://github.com/ecomfe/vue-echarts.git",
-  "author": "GU Yiling <justice360@gmail.com>",
+  "name": "vue-echarts-compat",
+  "version": "7.0.4",
+  "description": "Fork of vue-echarts that supports Apache ECharts 6 and Vue 2/3.",
+  "license": "MIT",  
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "pnpm run docs && rimraf dist && pnpm run build:rollup",
@@ -34,7 +32,7 @@
   },
   "peerDependencies": {
     "@vue/runtime-core": "^3.0.0",
-    "echarts": "^5.5.1",
+    "echarts": "^6.0.0 || ^5.5.1",
     "vue": "^2.7.0 || ^3.1.1"
   },
   "peerDependenciesMeta": {
@@ -60,7 +58,7 @@
     "@vueuse/core": "^10.11.0",
     "comment-mark": "^1.1.1",
     "core-js": "^3.37.1",
-    "echarts": "^5.5.1",
+    "echarts": "^6.0.0",
     "echarts-gl": "^2.0.9",
     "echarts-liquidfill": "^3.1.0",
     "esbuild-wasm": "^0.23.0",
